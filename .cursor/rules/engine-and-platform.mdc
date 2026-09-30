@@ -1,0 +1,23 @@
+---
+description: 写 Phaser 或微信适配代码前先读对应 skill
+alwaysApply: true
+---
+
+# 引擎与平台 skill
+
+写游戏入口、场景、缩放、资源、指针、补间或音频前，先读 Phaser 官方 skill。它们随 `phaser` 包放在 `node_modules/phaser/skills/`，工程搭好后链接到 `.cursor/skills/`。本仓库使用 Phaser 4。
+
+常用入口：
+
+- `game-setup-and-config`：`new Phaser.Game`、`Phaser.AUTO`
+- `scale-and-responsive`：`Scale.FIT`、`CENTER_BOTH`
+- `scenes`：`init` / `preload` / `create` / `update`
+- `loading-assets`：`this.load.image` / `this.load.audio` / `this.load.json`
+- `sprites-and-images`：图片与点击区域
+- `input-keyboard-mouse-touch`：指针、拖拽、`topOnly`
+- `tweens`：收集飞入、拖拽回弹
+- `audio-and-sound`：浏览器音效
+
+写存档、分享、广告、分包或微信运行时前，先读 `.cursor/skills/wechat-minigame-dev/SKILL.md` 和它点名的 `references/`。该技能的引擎名单没有 Phaser，平台规则仍按它执行，渲染继续用 Phaser。
+
+玩法判定放在不依赖 Phaser 的 TypeScript 里，并用 Vitest 覆盖。Phaser 只负责画面和输入。
