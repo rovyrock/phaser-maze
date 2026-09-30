@@ -82,7 +82,7 @@ npm run levels
 
 这会读取 `content/specs/`，写入 `content/levels/{resourceId}/level.json`、`assets/images/top.png`、`assets/images/bottom.png`。目录 `content/catalog.json` 仍手写名单，脚本不改解锁顺序，也不改 `docs/samples/`。
 
-第 1 关「山羊草地」、第 2 关「厨房里的猫」、第 3 关「运车的卡车」都没有规格。它们的 `level.json` 和两张 `jpg` 来自外部茬图包，放在 `content/levels/{resourceId}/`。包里的 `assets/images/items/` 是单处切图，当前场景不加载。`content/specs/` 现在是空的。`npm run levels` 没有规格时直接结束，不改已有关卡。以后放进新规格，也只生成那一关，不会覆盖这三关。
+第 1 关「山羊草地」、第 2 关「厨房里的猫」、第 3 关「运车的卡车」、第 4 关「浴室洗手台」都没有规格。它们的 `level.json` 和两张 `jpg` 来自外部茬图包，放在 `content/levels/{resourceId}/`。包里的 `assets/images/items/` 是单处切图，当前场景不加载。`content/specs/` 现在是空的。`npm run levels` 没有规格时直接结束，不改已有关卡。以后放进新规格，也只生成那一关，不会覆盖这四关。
 
 ## 关卡资源加载
 
@@ -201,6 +201,7 @@ content/catalog.json
 content/levels/001/level.json
 content/levels/002/level.json
 content/levels/003/level.json
+content/levels/004/level.json
 docs/requirements.md
 docs/development.md
 docs/samples/level-001.json
@@ -213,11 +214,11 @@ docs/samples/level-001.json
 ## 顺序
 
 1. 校验器、`differenceAt` 和 `LevelSession`。
-2. `scripts/build-diff-level.mjs` 从规格生成仍有规格的关卡，圆心像素必须不同。当前三关都由外部茬图包提供。
+2. `scripts/build-diff-level.mjs` 从规格生成仍有规格的关卡，圆心像素必须不同。当前四关都由外部茬图包提供。
 3. `LevelScene` 上下两张图、套圈、圆点、提示、倒计时和结算。
 4. 浏览器里走通点中、点空、找齐、重试和目录失败。
 5. 微信探针以后再做。
 
 ## 当前进度
 
-浏览器里是上下两张图的找不同。三关都用外部茬图包：山羊草地、厨房里的猫、运车的卡车。图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。
+浏览器里是上下两张图的找不同。四关都用外部茬图包：山羊草地、厨房里的猫、运车的卡车、浴室洗手台。图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。

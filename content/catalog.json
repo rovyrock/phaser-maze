@@ -3,6 +3,7 @@
   "levels": [
     { "resourceId": "001", "title": "山羊草地", "order": 1 },
     { "resourceId": "002", "title": "厨房里的猫", "order": 2 },
-    { "resourceId": "003", "title": "运车的卡车", "order": 3 }
+    { "resourceId": "003", "title": "运车的卡车", "order": 3 },
+    { "resourceId": "004", "title": "浴室洗手台", "order": 4 }
   ]
 }

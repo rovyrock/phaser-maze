@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "004",
+    "configId": 4,
+    "title": "浴室洗手台",
+    "description": "找出两张图的不同（共 3 处）",
+    "type": "diff",
+    "targetCount": 3,
+    "totalTime": 60,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "towel",
+      "displayName": "折叠毛巾",
+      "tip": "左边叠好的毛巾",
+      "x": 117,
+      "y": 153,
+      "radius": 105
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "soap",
+      "displayName": "洗手液",
+      "tip": "中间的洗手液瓶",
+      "x": 346,
+      "y": 113,
+      "radius": 88
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "cup",
+      "displayName": "漱口杯",
+      "tip": "右边的漱口杯",
+      "x": 540,
+      "y": 152,
+      "radius": 62
+    }
+  ]
+}
