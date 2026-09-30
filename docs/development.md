@@ -46,7 +46,7 @@ interface DiffItem {
 }
 ```
 
-`itemId` 稳定。`slug` 匹配 `^[a-z0-9]+(-[a-z0-9]+)*$`。`order` 从 1 开始。`targetCount` 必须等于 `items` 长度。`x`、`y` 落在图片范围内，`radius` 为正数。
+`itemId` 稳定。`slug` 匹配 `^[a-z0-9]+([_-][a-z0-9]+)*$`，单词之间可以用连字符或下划线。`order` 从 1 开始。`targetCount` 必须等于 `items` 长度。`x`、`y` 落在图片范围内，`radius` 为正数。
 
 `level.json` 用 `loadLevelFile` 拉取。两张图用拼好的绝对 URL，键用 `AssetRef.key`。浏览器不用 Phaser Loader 队列：同一场景重开后，这条队列会停在半截进度。图片用 `Image` 解码后交给 `textures.addImage`。禁止用打包器的 `import` 把关卡图打进 JS。
 
@@ -82,7 +82,7 @@ npm run levels
 
 这会读取 `content/specs/`，写入 `content/levels/{resourceId}/level.json`、`assets/images/top.png`、`assets/images/bottom.png`。目录 `content/catalog.json` 仍手写名单，脚本不改解锁顺序，也不改 `docs/samples/`。
 
-第 1 关没有规格。它的 `level.json` 和两张 `jpg` 来自外部茬图包，放在 `content/levels/001/`。包里的 `assets/images/items/` 是单处切图，当前场景不加载。`npm run levels` 只生成仍有规格的第 2、3 关，不会覆盖第 1 关。
+第 1 关「山羊草地」和第 2 关「厨房里的猫」没有规格。它们的 `level.json` 和两张 `jpg` 来自外部茬图包，分别放在 `content/levels/001/` 和 `content/levels/002/`。包里的 `assets/images/items/` 是单处切图，当前场景不加载。`npm run levels` 只生成仍有规格的第 3 关，不会覆盖第 1、2 关。
 
 ## 关卡资源加载
 
@@ -196,9 +196,10 @@ src/game/levels/catalog.ts
 src/game/platform/web.ts
 src/game/scenes/LevelScene.ts
 scripts/build-diff-level.mjs
-content/specs/002.json
+content/specs/003.json
 content/catalog.json
 content/levels/001/level.json
+content/levels/002/level.json
 docs/requirements.md
 docs/development.md
 docs/samples/level-001.json
@@ -211,11 +212,11 @@ docs/samples/level-001.json
 ## 顺序
 
 1. 校验器、`differenceAt` 和 `LevelSession`。
-2. `scripts/build-diff-level.mjs` 从规格生成仍有规格的关卡，圆心像素必须不同。第 1 关改由外部茬图包提供。
+2. `scripts/build-diff-level.mjs` 从规格生成仍有规格的关卡，圆心像素必须不同。第 1、2 关改由外部茬图包提供。
 3. `LevelScene` 上下两张图、套圈、圆点、提示、倒计时和结算。
 4. 浏览器里走通点中、点空、找齐、重试和目录失败。
 5. 微信探针以后再做。
 
 ## 当前进度
 
-浏览器里是上下两张图的找不同。第 1 关「山羊草地」用外部茬图包，第 2、3 关由 `content/specs/` 生成。图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。
+浏览器里是上下两张图的找不同。第 1 关「山羊草地」和第 2 关「厨房里的猫」用外部茬图包，第 3 关由 `content/specs/` 生成。图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。

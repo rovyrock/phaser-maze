@@ -1,6 +1,6 @@
 # 找茬
 
-竖屏找不同。上下两张图，点出不一样的地方。引擎是 Phaser 4，先在浏览器里做可玩关卡，再接到微信小游戏。第 1 关是外部茬图包，第 2、3 关由 `npm run levels` 从 `content/specs/` 生成。
+竖屏找不同。上下两张图，点出不一样的地方。引擎是 Phaser 4，先在浏览器里做可玩关卡，再接到微信小游戏。第 1、2 关是外部茬图包，第 3 关由 `npm run levels` 从 `content/specs/` 生成。
 
 - 玩家规则：`docs/requirements.md`
 - 实现约定：`docs/development.md`

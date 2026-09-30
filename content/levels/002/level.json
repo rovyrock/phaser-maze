@@ -4,11 +4,11 @@
   "level": {
     "resourceId": "002",
     "configId": 2,
-    "title": "海边",
-    "description": "找出两张海边图的不同",
+    "title": "厨房里的猫",
+    "description": "找出两张厨房图的不同",
     "type": "diff",
-    "targetCount": 4,
-    "totalTime": 70,
+    "targetCount": 5,
+    "totalTime": 90,
     "picture": {
       "width": 640,
       "height": 460
@@ -17,12 +17,12 @@
   "pictures": {
     "top": {
       "slot": "top",
-      "path": "assets/images/top.png",
+      "path": "assets/images/top.jpg",
       "key": "top"
     },
     "bottom": {
       "slot": "bottom",
-      "path": "assets/images/bottom.png",
+      "path": "assets/images/bottom.jpg",
       "key": "bottom"
     }
   },
@@ -30,42 +30,52 @@
     {
       "itemId": "item_001",
       "order": 1,
-      "slug": "sail",
-      "displayName": "船帆",
-      "tip": "看看船帆的颜色",
-      "x": 235,
-      "y": 260,
-      "radius": 28
+      "slug": "jar",
+      "displayName": "果酱罐",
+      "tip": "架子上那罐果酱的颜色",
+      "x": 369,
+      "y": 34,
+      "radius": 26
     },
     {
       "itemId": "item_002",
       "order": 2,
-      "slug": "crab",
-      "displayName": "螃蟹",
-      "tip": "沙滩左边少了什么",
-      "x": 90,
-      "y": 410,
+      "slug": "cat_patch",
+      "displayName": "猫的斑纹",
+      "tip": "看看猫的背上",
+      "x": 173,
+      "y": 85,
       "radius": 22
     },
     {
       "itemId": "item_003",
       "order": 3,
-      "slug": "shell",
-      "displayName": "贝壳",
-      "tip": "沙滩上多了一只贝壳",
-      "x": 300,
-      "y": 412,
-      "radius": 20
+      "slug": "jug",
+      "displayName": "陶罐",
+      "tip": "中间那个陶罐的颜色",
+      "x": 398,
+      "y": 296,
+      "radius": 48
     },
     {
       "itemId": "item_004",
       "order": 4,
-      "slug": "umbrella",
-      "displayName": "伞",
-      "tip": "遮阳伞换了颜色",
-      "x": 434,
-      "y": 292,
-      "radius": 28
+      "slug": "sack_apple",
+      "displayName": "麻袋苹果",
+      "tip": "麻袋里的苹果",
+      "x": 529,
+      "y": 345,
+      "radius": 22
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "floor_apple",
+      "displayName": "地上苹果",
+      "tip": "地上多了一个苹果",
+      "x": 252,
+      "y": 415,
+      "radius": 25
     }
   ]
 }

@@ -21,6 +21,12 @@ describe('validateLevel', () => {
     expect(() => validateLevel(broken)).toThrow(LevelValidationError)
   })
 
+  it('接受带下划线的 slug', () => {
+    const level = sample()
+    level.items[0]!.slug = 'cat_patch'
+    expect(validateLevel(level).items[0]?.slug).toBe('cat_patch')
+  })
+
   it('拒绝重复 slug', () => {
     const broken = sample()
     broken.items[1]!.slug = broken.items[0]!.slug

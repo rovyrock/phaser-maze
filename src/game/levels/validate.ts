@@ -1,7 +1,7 @@
 import { LevelValidationError, type AssetRef, type DiffItem, type LevelFile } from './types'
 
 const RESOURCE_ID = /^[0-9]{3}$/
-const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/
+const SLUG = /^[a-z0-9]+([_-][a-z0-9]+)*$/
 
 export function validateLevel(raw: unknown): LevelFile {
   const record = asRecord(raw, '关卡')
