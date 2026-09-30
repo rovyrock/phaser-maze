@@ -49,7 +49,7 @@ export function createWebPlatform(storage: Pick<Storage, 'getItem' | 'setItem'> 
       return () => show.delete(listener)
     },
     async loadLevelFile(url: string) {
-      const response = await fetch(url)
+      const response = await fetch(url, { cache: 'reload' })
       if (!response.ok) throw new Error(`关卡加载失败 ${response.status}`)
       return response.json() as Promise<unknown>
     },

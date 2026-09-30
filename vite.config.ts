@@ -23,7 +23,7 @@ function serveContent(): Plugin {
       }
       res.setHeader('Content-Type', MIME[path.extname(file)] ?? 'application/octet-stream')
       res.setHeader('Access-Control-Allow-Origin', '*')
-      res.setHeader('Cache-Control', 'public, max-age=3600')
+      res.setHeader('Cache-Control', 'no-cache')
       createReadStream(file).pipe(res)
     })
   }

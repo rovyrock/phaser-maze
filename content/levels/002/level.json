@@ -1,100 +1,71 @@
 {
-  "schemaVersion": "spot-level-phaser-v1",
+  "schemaVersion": "diff-level-phaser-v1",
   "gameCode": "phaser-maze",
   "level": {
     "resourceId": "002",
     "configId": 2,
-    "title": "相框",
-    "description": "看清相框里多出来的东西",
-    "type": "collect",
-    "targetCount": 2,
-    "totalTime": 45
+    "title": "海边",
+    "description": "找出两张海边图的不同",
+    "type": "diff",
+    "targetCount": 4,
+    "totalTime": 70,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.png",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.png",
+      "key": "bottom"
+    }
   },
   "items": [
     {
       "itemId": "item_001",
       "order": 1,
-      "slug": "lamp",
-      "displayName": "台灯",
-      "collectText": "没接电的灯",
-      "tip": "看看左边的灯",
-      "dialogueText": "灯亮着，插头却是空的。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/lamp.png",
-          "key": "lamp"
-        }
-      },
-      "logic": {
-        "type": "directClick",
-        "nodes": { "collect": "button-01-lamp" },
-        "collectTiming": "onClick"
-      }
+      "slug": "sail",
+      "displayName": "船帆",
+      "tip": "看看船帆的颜色",
+      "x": 235,
+      "y": 260,
+      "radius": 28
     },
     {
       "itemId": "item_002",
       "order": 2,
-      "slug": "letter",
-      "displayName": "信",
-      "collectText": "没写完的信",
-      "tip": "点开相框里的信",
-      "dialogueText": "最后一句被涂掉了。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/letter.png",
-          "key": "letter"
-        },
-        "bigImage": {
-          "slot": "bigImage",
-          "path": "assets/images/big/letter-big.png",
-          "key": "letter-big"
-        }
-      },
-      "logic": {
-        "type": "bigImage",
-        "nodes": { "collect": "button-02-letter", "big": "big-02-letter" },
-        "autoDismissSec": 2,
-        "collectTiming": "onBigDismiss"
-      }
-    }
-  ],
-  "layout": {
-    "background": {
-      "slot": "background",
-      "path": "assets/images/bg/room.png",
-      "key": "bg-room"
+      "slug": "crab",
+      "displayName": "螃蟹",
+      "tip": "沙滩左边少了什么",
+      "x": 90,
+      "y": 410,
+      "radius": 22
     },
-    "nodes": [
-      {
-        "name": "button-01-lamp",
-        "x": 180,
-        "y": 420,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "lamp",
-        "hit": { "kind": "rect", "x": 110, "y": 320, "width": 140, "height": 180 }
-      },
-      {
-        "name": "button-02-letter",
-        "x": 480,
-        "y": 640,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "letter",
-        "hit": { "kind": "rect", "x": 400, "y": 540, "width": 160, "height": 200 }
-      },
-      {
-        "name": "big-02-letter",
-        "x": 375,
-        "y": 640,
-        "depth": 80,
-        "visible": false,
-        "imageKey": "letter-big"
-      }
-    ]
-  }
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "shell",
+      "displayName": "贝壳",
+      "tip": "沙滩上多了一只贝壳",
+      "x": 300,
+      "y": 412,
+      "radius": 20
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "umbrella",
+      "displayName": "伞",
+      "tip": "遮阳伞换了颜色",
+      "x": 434,
+      "y": 292,
+      "radius": 28
+    }
+  ]
 }

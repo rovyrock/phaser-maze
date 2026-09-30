@@ -1,117 +1,81 @@
 {
-  "schemaVersion": "spot-level-phaser-v1",
+  "schemaVersion": "diff-level-phaser-v1",
   "gameCode": "phaser-maze",
   "level": {
     "resourceId": "001",
     "configId": 1,
-    "title": "桌面",
-    "description": "找出桌上不对劲的地方",
-    "type": "collect",
-    "targetCount": 3,
-    "totalTime": 60
+    "title": "庭院",
+    "description": "找出两张庭院图的不同",
+    "type": "diff",
+    "targetCount": 5,
+    "totalTime": 90,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.png",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.png",
+      "key": "bottom"
+    }
   },
   "items": [
     {
       "itemId": "item_001",
       "order": 1,
-      "slug": "clock",
-      "displayName": "时钟",
-      "collectText": "反走的钟",
-      "tip": "看看墙上的钟",
-      "dialogueText": "指针在往回走。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/clock.png",
-          "key": "clock"
-        }
-      },
-      "logic": {
-        "type": "directClick",
-        "nodes": { "collect": "button-01-clock" },
-        "collectTiming": "onClick"
-      }
+      "slug": "ball",
+      "displayName": "皮球",
+      "tip": "看看地上的球",
+      "x": 140,
+      "y": 360,
+      "radius": 30
     },
     {
       "itemId": "item_002",
       "order": 2,
-      "slug": "photo",
-      "displayName": "照片",
-      "collectText": "倒扣的相框",
-      "tip": "看看桌上的相框",
-      "dialogueText": "相框被人扣了过去。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/photo.png",
-          "key": "photo"
-        }
-      },
-      "logic": {
-        "type": "directClick",
-        "nodes": { "collect": "button-02-photo" },
-        "collectTiming": "onClick"
-      }
+      "slug": "bird",
+      "displayName": "小鸟",
+      "tip": "天空里少了什么",
+      "x": 540,
+      "y": 96,
+      "radius": 20
     },
     {
       "itemId": "item_003",
       "order": 3,
-      "slug": "cup",
-      "displayName": "杯子",
-      "collectText": "空了一半的杯",
-      "tip": "看看手边的杯子",
-      "dialogueText": "杯子里的水少了一截。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/cup.png",
-          "key": "cup"
-        }
-      },
-      "logic": {
-        "type": "directClick",
-        "nodes": { "collect": "button-03-cup" },
-        "collectTiming": "onClick"
-      }
-    }
-  ],
-  "layout": {
-    "background": {
-      "slot": "background",
-      "path": "assets/images/bg/desk.png",
-      "key": "bg-desk"
+      "slug": "flower",
+      "displayName": "花",
+      "tip": "草地右边多了一朵花",
+      "x": 400,
+      "y": 390,
+      "radius": 22
     },
-    "nodes": [
-      {
-        "name": "button-01-clock",
-        "x": 560,
-        "y": 280,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "clock",
-        "hit": { "kind": "rect", "x": 500, "y": 210, "width": 120, "height": 140 }
-      },
-      {
-        "name": "button-02-photo",
-        "x": 220,
-        "y": 640,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "photo",
-        "hit": { "kind": "rect", "x": 160, "y": 560, "width": 140, "height": 160 }
-      },
-      {
-        "name": "button-03-cup",
-        "x": 480,
-        "y": 860,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "cup",
-        "hit": { "kind": "circle", "x": 480, "y": 860, "radius": 70 }
-      }
-    ]
-  }
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "window",
+      "displayName": "窗户",
+      "tip": "看看房子的窗户",
+      "x": 284,
+      "y": 244,
+      "radius": 22
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "cloud",
+      "displayName": "云",
+      "tip": "云的位置变了",
+      "x": 210,
+      "y": 78,
+      "radius": 36
+    }
+  ]
 }

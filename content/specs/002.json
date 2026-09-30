@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "diff-spec-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "002",
+    "configId": 2,
+    "title": "海边",
+    "description": "找出两张海边图的不同",
+    "totalTime": 70
+  },
+  "picture": { "width": 640, "height": 460 },
+  "shapes": [
+    { "id": "sky", "kind": "rect", "x": 0, "y": 0, "w": 640, "h": 200, "fill": "#7ec8ea" },
+    { "id": "sea", "kind": "rect", "x": 0, "y": 200, "w": 640, "h": 160, "fill": "#1e88c7" },
+    { "id": "sand", "kind": "rect", "x": 0, "y": 360, "w": 640, "h": 100, "fill": "#f3d38a" },
+    { "id": "sun", "kind": "circle", "x": 540, "y": 64, "r": 32, "fill": "#ffd54f" },
+    { "id": "hull", "kind": "rect", "x": 170, "y": 300, "w": 130, "h": 28, "fill": "#8d6e63" },
+    { "id": "sail", "kind": "tri", "points": [[190, 300], [235, 214], [280, 300]], "fill": "#f7f4ee" },
+    { "id": "pole", "kind": "rect", "x": 430, "y": 300, "w": 8, "h": 70, "fill": "#6d4c41" },
+    { "id": "canopy", "kind": "ellipse", "x": 434, "y": 292, "rx": 42, "ry": 16, "fill": "#e53935" },
+    { "id": "crab", "kind": "circle", "x": 90, "y": 410, "r": 14, "fill": "#e64a19" }
+  ],
+  "differences": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "sail",
+      "displayName": "船帆",
+      "tip": "看看船帆的颜色",
+      "x": 235,
+      "y": 260,
+      "radius": 28,
+      "op": { "kind": "recolor", "shapeId": "sail", "fill": "#ef9a9a" }
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "crab",
+      "displayName": "螃蟹",
+      "tip": "沙滩左边少了什么",
+      "x": 90,
+      "y": 410,
+      "radius": 22,
+      "op": { "kind": "hide", "shapeId": "crab" }
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "shell",
+      "displayName": "贝壳",
+      "tip": "沙滩上多了一只贝壳",
+      "x": 300,
+      "y": 412,
+      "radius": 20,
+      "op": { "kind": "add", "shape": { "id": "shell", "kind": "circle", "x": 300, "y": 412, "r": 10, "fill": "#fff8e1" } }
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "umbrella",
+      "displayName": "伞",
+      "tip": "遮阳伞换了颜色",
+      "x": 434,
+      "y": 292,
+      "radius": 28,
+      "op": { "kind": "recolor", "shapeId": "canopy", "fill": "#43a047" }
+    }
+  ]
+}

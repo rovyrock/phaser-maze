@@ -1,115 +1,71 @@
 {
-  "schemaVersion": "spot-level-phaser-v1",
+  "schemaVersion": "diff-level-phaser-v1",
   "gameCode": "phaser-maze",
   "level": {
     "resourceId": "003",
     "configId": 3,
-    "title": "茶杯",
-    "description": "找出桌上被换过的东西",
-    "type": "collect",
-    "targetCount": 2,
-    "totalTime": 45
+    "title": "书桌",
+    "description": "找出两张书桌图的不同",
+    "type": "diff",
+    "targetCount": 4,
+    "totalTime": 60,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.png",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.png",
+      "key": "bottom"
+    }
   },
   "items": [
     {
       "itemId": "item_001",
       "order": 1,
-      "slug": "note",
-      "displayName": "纸条",
-      "collectText": "反过来的纸条",
-      "tip": "看看桌角的纸条",
-      "dialogueText": "纸条是倒着放的。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/note.png",
-          "key": "note"
-        }
-      },
-      "logic": {
-        "type": "directClick",
-        "nodes": { "collect": "button-01-note" },
-        "collectTiming": "onClick"
-      }
+      "slug": "cup",
+      "displayName": "杯子",
+      "tip": "看看杯子的颜色",
+      "x": 220,
+      "y": 360,
+      "radius": 26
     },
     {
       "itemId": "item_002",
       "order": 2,
-      "slug": "cup",
-      "displayName": "茶杯",
-      "collectText": "裂开的杯",
-      "tip": "碰一下茶杯",
-      "dialogueText": "杯子自己裂开了。",
-      "needCollect": true,
-      "assets": {
-        "collectImage": {
-          "slot": "collectImage",
-          "path": "assets/images/collect/cup.png",
-          "key": "cup"
-        },
-        "beforeImage": {
-          "slot": "beforeImage",
-          "path": "assets/images/before/cup.png",
-          "key": "cup-before"
-        },
-        "afterImage": {
-          "slot": "afterImage",
-          "path": "assets/images/after/cup.png",
-          "key": "cup-after"
-        }
-      },
-      "logic": {
-        "type": "clickChangeCollect",
-        "nodes": {
-          "collect": "button-02-cup",
-          "before": "before-02-cup",
-          "after": "after-02-cup"
-        },
-        "collectTiming": "onClick"
-      }
-    }
-  ],
-  "layout": {
-    "background": {
-      "slot": "background",
-      "path": "assets/images/bg/table.png",
-      "key": "bg-table"
+      "slug": "book",
+      "displayName": "书",
+      "tip": "桌面上少了一本书",
+      "x": 338,
+      "y": 352,
+      "radius": 24
     },
-    "nodes": [
-      {
-        "name": "button-01-note",
-        "x": 200,
-        "y": 480,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "note",
-        "hit": { "kind": "rect", "x": 130, "y": 400, "width": 140, "height": 160 }
-      },
-      {
-        "name": "before-02-cup",
-        "x": 500,
-        "y": 760,
-        "depth": 10,
-        "visible": true,
-        "imageKey": "cup-before"
-      },
-      {
-        "name": "after-02-cup",
-        "x": 500,
-        "y": 760,
-        "depth": 11,
-        "visible": false,
-        "imageKey": "cup-after"
-      },
-      {
-        "name": "button-02-cup",
-        "x": 500,
-        "y": 760,
-        "depth": 12,
-        "visible": true,
-        "hit": { "kind": "circle", "x": 500, "y": 760, "radius": 80 }
-      }
-    ]
-  }
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "pen",
+      "displayName": "笔",
+      "tip": "桌上多了一支笔",
+      "x": 400,
+      "y": 400,
+      "radius": 20
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "lamp",
+      "displayName": "灯",
+      "tip": "灯罩换了颜色",
+      "x": 90,
+      "y": 210,
+      "radius": 28
+    }
+  ]
 }

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build && node scripts/assert-no-level-assets.mjs",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "levels": "node scripts/build-diff-level.mjs content/specs"
   },
   "dependencies": {
     "phaser": "4.2.0"
