@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "spot-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "001",
+    "configId": 1,
+    "title": "桌面",
+    "description": "找出桌上不对劲的地方",
+    "type": "collect",
+    "targetCount": 3,
+    "totalTime": 60
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "clock",
+      "displayName": "时钟",
+      "collectText": "反走的钟",
+      "tip": "看看墙上的钟",
+      "dialogueText": "指针在往回走。",
+      "needCollect": true,
+      "assets": {
+        "collectImage": {
+          "slot": "collectImage",
+          "path": "assets/images/collect/clock.png",
+          "key": "clock"
+        }
+      },
+      "logic": {
+        "type": "directClick",
+        "nodes": { "collect": "button-01-clock" },
+        "collectTiming": "onClick"
+      }
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "photo",
+      "displayName": "照片",
+      "collectText": "倒扣的相框",
+      "tip": "看看桌上的相框",
+      "dialogueText": "相框被人扣了过去。",
+      "needCollect": true,
+      "assets": {
+        "collectImage": {
+          "slot": "collectImage",
+          "path": "assets/images/collect/photo.png",
+          "key": "photo"
+        }
+      },
+      "logic": {
+        "type": "directClick",
+        "nodes": { "collect": "button-02-photo" },
+        "collectTiming": "onClick"
+      }
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "cup",
+      "displayName": "杯子",
+      "collectText": "空了一半的杯",
+      "tip": "看看手边的杯子",
+      "dialogueText": "杯子里的水少了一截。",
+      "needCollect": true,
+      "assets": {
+        "collectImage": {
+          "slot": "collectImage",
+          "path": "assets/images/collect/cup.png",
+          "key": "cup"
+        }
+      },
+      "logic": {
+        "type": "directClick",
+        "nodes": { "collect": "button-03-cup" },
+        "collectTiming": "onClick"
+      }
+    }
+  ],
+  "layout": {
+    "background": {
+      "slot": "background",
+      "path": "assets/images/bg/desk.png",
+      "key": "bg-desk"
+    },
+    "nodes": [
+      {
+        "name": "button-01-clock",
+        "x": 560,
+        "y": 280,
+        "depth": 10,
+        "visible": true,
+        "imageKey": "clock",
+        "hit": { "kind": "rect", "x": 500, "y": 210, "width": 120, "height": 140 }
+      },
+      {
+        "name": "button-02-photo",
+        "x": 220,
+        "y": 640,
+        "depth": 10,
+        "visible": true,
+        "imageKey": "photo",
+        "hit": { "kind": "rect", "x": 160, "y": 560, "width": 140, "height": 160 }
+      },
+      {
+        "name": "button-03-cup",
+        "x": 480,
+        "y": 860,
+        "depth": 10,
+        "visible": true,
+        "imageKey": "cup",
+        "hit": { "kind": "circle", "x": 480, "y": 860, "radius": 70 }
+      }
+    ]
+  }
+}
