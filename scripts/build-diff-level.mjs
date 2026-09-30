@@ -15,10 +15,6 @@ for (const file of files) {
   fs.writeFileSync(path.join(dir, 'assets/images/top.png'), built.top)
   fs.writeFileSync(path.join(dir, 'assets/images/bottom.png'), built.bottom)
   fs.writeFileSync(path.join(dir, 'level.json'), `${JSON.stringify(built.level, null, 2)}\n`)
-  if (built.level.level.resourceId === '001') {
-    fs.mkdirSync(path.join(root, 'docs/samples'), { recursive: true })
-    fs.writeFileSync(path.join(root, 'docs/samples/level-001.json'), `${JSON.stringify(built.level, null, 2)}\n`)
-  }
   console.log(`${built.level.level.resourceId} ${built.level.level.title} ${built.level.items.length} 处`)
 }
 

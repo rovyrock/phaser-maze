@@ -59,7 +59,7 @@ interface DiffItem {
 - `pictures.top` 和 `pictures.bottom` 的 `path` 以 `assets/` 开头，且不含 `..`
 - 两个 `key` 不相同
 
-样例 `docs/samples/level-001.json` 是生成后的第 1 关，测试用它做校验。
+样例 `docs/samples/level-001.json` 是第 1 关「山羊草地」的外部包配置，测试用它做校验。图片是 `assets/images/top.jpg` 和 `assets/images/bottom.jpg`。
 
 ## 生成茬图
 
@@ -80,9 +80,9 @@ interface DiffItem {
 npm run levels
 ```
 
-这会读取 `content/specs/`，写入 `content/levels/{resourceId}/level.json`、`assets/images/top.png`、`assets/images/bottom.png`。`001` 同时覆盖 `docs/samples/level-001.json`。目录 `content/catalog.json` 仍手写名单，脚本不改解锁顺序。
+这会读取 `content/specs/`，写入 `content/levels/{resourceId}/level.json`、`assets/images/top.png`、`assets/images/bottom.png`。目录 `content/catalog.json` 仍手写名单，脚本不改解锁顺序，也不改 `docs/samples/`。
 
-正式美术后可以停用某关的规格，直接替换这两张图，但 `level.json` 的字段保持不变。
+第 1 关没有规格。它的 `level.json` 和两张 `jpg` 来自外部茬图包，放在 `content/levels/001/`。包里的 `assets/images/items/` 是单处切图，当前场景不加载。`npm run levels` 只生成仍有规格的第 2、3 关，不会覆盖第 1 关。
 
 ## 关卡资源加载
 
@@ -196,7 +196,7 @@ src/game/levels/catalog.ts
 src/game/platform/web.ts
 src/game/scenes/LevelScene.ts
 scripts/build-diff-level.mjs
-content/specs/001.json
+content/specs/002.json
 content/catalog.json
 content/levels/001/level.json
 docs/requirements.md
@@ -211,11 +211,11 @@ docs/samples/level-001.json
 ## 顺序
 
 1. 校验器、`differenceAt` 和 `LevelSession`。
-2. `scripts/build-diff-level.mjs` 从规格生成 3 关，圆心像素必须不同。
+2. `scripts/build-diff-level.mjs` 从规格生成仍有规格的关卡，圆心像素必须不同。第 1 关改由外部茬图包提供。
 3. `LevelScene` 上下两张图、套圈、圆点、提示、倒计时和结算。
 4. 浏览器里走通点中、点空、找齐、重试和目录失败。
 5. 微信探针以后再做。
 
 ## 当前进度
 
-浏览器里是上下两张图的找不同。3 关由 `content/specs/` 生成，图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。
+浏览器里是上下两张图的找不同。第 1 关「山羊草地」用外部茬图包，第 2、3 关由 `content/specs/` 生成。图在 `content/`，不进构建产物。首页读目录，解锁存在本地。微信运行时还没接。

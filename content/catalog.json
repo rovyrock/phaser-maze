@@ -1,7 +1,7 @@
 {
   "schemaVersion": "spot-catalog-v1",
   "levels": [
-    { "resourceId": "001", "title": "庭院", "order": 1 },
+    { "resourceId": "001", "title": "山羊草地", "order": 1 },
     { "resourceId": "002", "title": "海边", "order": 2 },
     { "resourceId": "003", "title": "书桌", "order": 3 }
   ]

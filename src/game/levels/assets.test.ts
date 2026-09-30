@@ -12,8 +12,8 @@ describe('关卡资源地址', () => {
     expect(levelJsonUrl(config.levelBaseUrl, '001')).toBe('/content/levels/001/level.json')
     const urls = listLevelAssetUrls(config, sample)
     expect(urls.map((asset) => asset.url)).toEqual([
-      '/content/levels/001/assets/images/top.png',
-      '/content/levels/001/assets/images/bottom.png',
+      '/content/levels/001/assets/images/top.jpg',
+      '/content/levels/001/assets/images/bottom.jpg',
     ])
     expect(urls.every((asset) => asset.kind === 'image')).toBe(true)
   })
