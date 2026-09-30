@@ -1,0 +1,20 @@
+{
+  "name": "phaser-maze",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/assert-no-level-assets.mjs",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "phaser": "4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.7"
+  }
+}

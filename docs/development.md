@@ -34,7 +34,7 @@ Phaser 官方 skill 随 `phaser` 包发布，路径是 `node_modules/phaser/skil
 
 样例 `docs/samples/level-001.json` 是第一关，三个茬点都是直接点击。大图和状态切换的字段见上面的类型表，等对应关卡再各补一份样例。可玩文件放在仓库的 `content/levels/{resourceId}/`，和游戏包分开。`content/` 只给本地内容服务和以后上传到内容地址，Vite 构建和微信上传包都不包含这个目录。
 
-加载用 Phaser Loader 的 `this.load.json`、`this.load.image`、`this.load.audio`，地址是拼好的绝对 URL，键用 `AssetRef.key`，同一关内 key 唯一。禁止用打包器的 `import` 把关卡图打进 JS。
+`level.json` 用 `loadLevelFile` 拉取。图片和音频用拼好的绝对 URL，键用 `AssetRef.key`，同一关内 key 唯一。浏览器不用 Phaser Loader 队列：同一场景重开后，这条队列会停在半截进度。图片用 `Image` 解码后交给 `textures.addImage`，音频先确认地址能下载，播放留到接音效时。禁止用打包器的 `import` 把关卡图打进 JS。
 
 ```ts
 interface LevelFile {
@@ -161,7 +161,7 @@ interface LevelAssetUrl {
 
 1. 拉 `level.json`。HTTP 状态不是 2xx，或 JSON 过不了校验，停在失败页。
 2. 用校验结果列出资源 URL。
-3. 下载这些文件。浏览器交给 Phaser Loader，微信先 `wx.downloadFile` 再把本地路径交给 Loader。并发不超过 8，给目录请求留出余量。微信 HTTP 并发上限是 10。
+3. 下载这些文件。浏览器按上一段解码图片；微信先 `wx.downloadFile`，再用本地路径解码。并发不超过 8，给目录请求留出余量。微信 HTTP 并发上限是 10。
 4. 场景按 `layout` 摆好之后创建 `LevelSession`，这时才开始 `tick`。
 5. 离开关卡时卸掉这一关的纹理和音频，避免多张背景堆在内存里。
 
@@ -234,12 +234,18 @@ const config = {
 ```ts
 interface Platform {
   content: ContentConfig
+  cache: LevelCache
   loadProgress(): Progress
   saveProgress(progress: Progress): void
-  onHide(listener: () => void): void
-  onShow(listener: () => void): void
+  onHide(listener: () => void): () => void
+  onShow(listener: () => void): () => void
   loadLevelFile(url: string): Promise<unknown>
   loadLevelBinary(url: string): Promise<string>
+}
+
+interface LevelCache {
+  get(key: string): string | null
+  put(key: string, localUrl: string): void
 }
 
 interface Progress {
@@ -249,7 +255,7 @@ interface Progress {
 
 `cleared` 存 `resourceId`。浏览器用 `localStorage`，键名 `phaser-maze.progress`。微信以后用本地存储，不在第一版做登录。`session_key` 不出现在客户端。
 
-`loadLevelFile` 取 JSON 文本再解析。浏览器是 `fetch`，要检查 `response.ok`。微信是 `wx.request`，`success` 里仍要看 `statusCode`，4xx 和 5xx 也走 `success`。`loadLevelBinary` 返回 Loader 能读的地址：浏览器用原 URL，微信用 `wx.downloadFile` 的本地路径。内容域名配进下载文件合法域名。
+`loadLevelFile` 取 JSON 文本再解析。浏览器是 `fetch`，要检查 `response.ok`。微信是 `wx.request`，`success` 里仍要看 `statusCode`，4xx 和 5xx 也走 `success`。`loadLevelBinary` 返回图片解码能读的地址：浏览器用原 URL，微信用 `wx.downloadFile` 的本地路径。内容域名配进下载文件合法域名。
 
 切后台时浏览器监听 `visibilitychange`，微信监听 `wx.onHide`。处理是暂停会话。第一版回到前台调用 `resume`，不恢复到半截大图；若暂停时大图开着，先按手动关闭的同一路径关掉再继续。解锁进度在过关当帧写入，不依赖对局中的自动存档。
 
@@ -300,4 +306,4 @@ docs/samples/level-001.json
 
 ## 当前进度
 
-文档和仓库规则已写好。还没有游戏代码，也没有可玩场景。
+浏览器里可以玩 3 关。关卡文件在 `content/`，开发服务器挂到 `/content`，不进构建产物。第 1 关是直接点击，第 2 关有大图，第 3 关有前后状态。首页读目录，解锁存在本地。微信运行时还没接。
