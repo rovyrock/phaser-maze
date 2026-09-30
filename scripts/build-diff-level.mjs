@@ -5,7 +5,10 @@ import zlib from 'node:zlib'
 const root = process.cwd()
 const specDir = path.resolve(root, process.argv[2] ?? 'content/specs')
 const files = fs.readdirSync(specDir).filter((name) => name.endsWith('.json')).sort()
-if (files.length === 0) throw new Error(`没有规格：${specDir}`)
+if (files.length === 0) {
+  console.log('没有规格，跳过生成')
+  process.exit(0)
+}
 
 for (const file of files) {
   const spec = JSON.parse(fs.readFileSync(path.join(specDir, file), 'utf8'))

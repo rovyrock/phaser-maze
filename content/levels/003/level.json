@@ -4,10 +4,10 @@
   "level": {
     "resourceId": "003",
     "configId": 3,
-    "title": "书桌",
-    "description": "找出两张书桌图的不同",
+    "title": "运车的卡车",
+    "description": "找出两张图的不同（共 3 处）",
     "type": "diff",
-    "targetCount": 4,
+    "targetCount": 3,
     "totalTime": 60,
     "picture": {
       "width": 640,
@@ -17,12 +17,12 @@
   "pictures": {
     "top": {
       "slot": "top",
-      "path": "assets/images/top.png",
+      "path": "assets/images/top.jpg",
       "key": "top"
     },
     "bottom": {
       "slot": "bottom",
-      "path": "assets/images/bottom.png",
+      "path": "assets/images/bottom.jpg",
       "key": "bottom"
     }
   },
@@ -30,42 +30,32 @@
     {
       "itemId": "item_001",
       "order": 1,
-      "slug": "cup",
-      "displayName": "杯子",
-      "tip": "看看杯子的颜色",
-      "x": 220,
-      "y": 360,
-      "radius": 26
+      "slug": "car_left",
+      "displayName": "左边的车",
+      "tip": "上面左边那辆车",
+      "x": 153,
+      "y": 64,
+      "radius": 90
     },
     {
       "itemId": "item_002",
       "order": 2,
-      "slug": "book",
-      "displayName": "书",
-      "tip": "桌面上少了一本书",
-      "x": 338,
-      "y": 352,
-      "radius": 24
+      "slug": "car_right",
+      "displayName": "右边的车",
+      "tip": "上面右边那辆车",
+      "x": 431,
+      "y": 64,
+      "radius": 90
     },
     {
       "itemId": "item_003",
       "order": 3,
-      "slug": "pen",
-      "displayName": "笔",
-      "tip": "桌上多了一支笔",
-      "x": 400,
-      "y": 400,
-      "radius": 20
-    },
-    {
-      "itemId": "item_004",
-      "order": 4,
-      "slug": "lamp",
-      "displayName": "灯",
-      "tip": "灯罩换了颜色",
-      "x": 90,
-      "y": 210,
-      "radius": 28
+      "slug": "bush",
+      "displayName": "树丛",
+      "tip": "车后面的树丛",
+      "x": 444,
+      "y": 298,
+      "radius": 33
     }
   ]
 }
