@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "005",
+    "configId": 5,
+    "title": "厨房挂件",
+    "description": "找出两张图的不同（共 3 处）",
+    "type": "diff",
+    "targetCount": 3,
+    "totalTime": 60,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "spoon",
+      "displayName": "粉色勺子",
+      "tip": "左边挂着的小勺",
+      "x": 94,
+      "y": 163,
+      "radius": 72
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "teapot",
+      "displayName": "茶壶",
+      "tip": "架子上的茶壶",
+      "x": 298,
+      "y": 296,
+      "radius": 62
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "kettle",
+      "displayName": "水壶",
+      "tip": "架子上的水壶",
+      "x": 477,
+      "y": 299,
+      "radius": 76
+    }
+  ]
+}

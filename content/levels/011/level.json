@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "011",
+    "configId": 11,
+    "title": "科学实验室",
+    "description": "找出两张图的不同（共 8 处）",
+    "type": "diff",
+    "targetCount": 8,
+    "totalTime": 90,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "item1",
+      "displayName": "差异1",
+      "tip": "第 1 处不同",
+      "x": 181,
+      "y": 89,
+      "radius": 24
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "item2",
+      "displayName": "差异2",
+      "tip": "第 2 处不同",
+      "x": 459,
+      "y": 68,
+      "radius": 26
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "item3",
+      "displayName": "差异3",
+      "tip": "第 3 处不同",
+      "x": 234,
+      "y": 168,
+      "radius": 30
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "item4",
+      "displayName": "差异4",
+      "tip": "第 4 处不同",
+      "x": 437,
+      "y": 150,
+      "radius": 27
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "item5",
+      "displayName": "差异5",
+      "tip": "第 5 处不同",
+      "x": 53,
+      "y": 263,
+      "radius": 25
+    },
+    {
+      "itemId": "item_006",
+      "order": 6,
+      "slug": "item6",
+      "displayName": "差异6",
+      "tip": "第 6 处不同",
+      "x": 253,
+      "y": 264,
+      "radius": 28
+    },
+    {
+      "itemId": "item_007",
+      "order": 7,
+      "slug": "item7",
+      "displayName": "差异7",
+      "tip": "第 7 处不同",
+      "x": 438,
+      "y": 317,
+      "radius": 25
+    },
+    {
+      "itemId": "item_008",
+      "order": 8,
+      "slug": "item8",
+      "displayName": "差异8",
+      "tip": "第 8 处不同",
+      "x": 141,
+      "y": 369,
+      "radius": 29
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "007",
+    "configId": 7,
+    "title": "海滩冲浪",
+    "description": "找出两张图的不同（共 3 处）",
+    "type": "diff",
+    "targetCount": 3,
+    "totalTime": 60,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "shorts",
+      "displayName": "短裤",
+      "tip": "男孩穿的短裤",
+      "x": 299,
+      "y": 298,
+      "radius": 62
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "starfish",
+      "displayName": "海星",
+      "tip": "沙滩上的海星",
+      "x": 66,
+      "y": 353,
+      "radius": 38
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "sail",
+      "displayName": "帆船",
+      "tip": "远处那艘帆船的帆",
+      "x": 588,
+      "y": 168,
+      "radius": 26
+    }
+  ]
+}

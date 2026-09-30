@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "006",
+    "configId": 6,
+    "title": "教室",
+    "description": "找出两张图的不同（共 3 处）",
+    "type": "diff",
+    "targetCount": 3,
+    "totalTime": 60,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "curtain",
+      "displayName": "窗帘",
+      "tip": "窗户上的窗帘",
+      "x": 88,
+      "y": 130,
+      "radius": 80
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "clock",
+      "displayName": "挂钟",
+      "tip": "墙上的挂钟",
+      "x": 564,
+      "y": 108,
+      "radius": 52
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "book",
+      "displayName": "书本",
+      "tip": "桌上的那本书",
+      "x": 444,
+      "y": 366,
+      "radius": 42
+    }
+  ]
+}

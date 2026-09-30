@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "009",
+    "configId": 9,
+    "title": "客厅",
+    "description": "找出两张图的不同（共 5 处）",
+    "type": "diff",
+    "targetCount": 5,
+    "totalTime": 90,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "lamp",
+      "displayName": "吊灯",
+      "tip": "左上角的吊灯灯罩",
+      "x": 178,
+      "y": 72,
+      "radius": 46
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "cushion",
+      "displayName": "靠垫",
+      "tip": "沙发上的靠垫",
+      "x": 78,
+      "y": 272,
+      "radius": 32
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "sweater",
+      "displayName": "毛衣",
+      "tip": "女孩身上的毛衣",
+      "x": 302,
+      "y": 254,
+      "radius": 46
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "bird",
+      "displayName": "小鸟",
+      "tip": "架子上的小鸟",
+      "x": 590,
+      "y": 54,
+      "radius": 34
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "skirt",
+      "displayName": "裙子",
+      "tip": "奶奶的裙子",
+      "x": 517,
+      "y": 356,
+      "radius": 54
+    }
+  ]
+}

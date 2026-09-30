@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "010",
+    "configId": 10,
+    "title": "厨房里的兄妹",
+    "description": "找出两张图的不同（共 5 处）",
+    "type": "diff",
+    "targetCount": 5,
+    "totalTime": 90,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "clock",
+      "displayName": "挂钟",
+      "tip": "墙上的挂钟",
+      "x": 386,
+      "y": 42,
+      "radius": 56
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "sweater",
+      "displayName": "毛衣",
+      "tip": "女孩身上的毛衣",
+      "x": 185,
+      "y": 240,
+      "radius": 80
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "jar",
+      "displayName": "罐子",
+      "tip": "架子上的红罐子",
+      "x": 578,
+      "y": 26,
+      "radius": 36
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "jam",
+      "displayName": "果酱罐",
+      "tip": "桌上的果酱罐",
+      "x": 373,
+      "y": 408,
+      "radius": 48
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "fruit",
+      "displayName": "果盘",
+      "tip": "右下角的果盘",
+      "x": 580,
+      "y": 392,
+      "radius": 40
+    }
+  ]
+}

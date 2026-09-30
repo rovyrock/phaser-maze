@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "012",
+    "configId": 12,
+    "title": "梳妆间",
+    "description": "找出两张图的不同（共 8 处）",
+    "type": "diff",
+    "targetCount": 8,
+    "totalTime": 120,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "clock",
+      "displayName": "挂钟",
+      "tip": "墙上的挂钟",
+      "x": 120,
+      "y": 72,
+      "radius": 74
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "bottle_r",
+      "displayName": "红瓶",
+      "tip": "架上左边那瓶",
+      "x": 540,
+      "y": 79,
+      "radius": 38
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "bottle_p",
+      "displayName": "紫瓶",
+      "tip": "架上右边那瓶",
+      "x": 614,
+      "y": 86,
+      "radius": 30
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "plant",
+      "displayName": "绿植",
+      "tip": "左边的盆栽",
+      "x": 24,
+      "y": 128,
+      "radius": 36
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "bottle_c",
+      "displayName": "青瓶",
+      "tip": "架子下一层左边",
+      "x": 552,
+      "y": 176,
+      "radius": 30
+    },
+    {
+      "itemId": "item_006",
+      "order": 6,
+      "slug": "bottle_g",
+      "displayName": "绿瓶",
+      "tip": "架子下一层右边",
+      "x": 601,
+      "y": 178,
+      "radius": 28
+    },
+    {
+      "itemId": "item_007",
+      "order": 7,
+      "slug": "dresser",
+      "displayName": "抽屉",
+      "tip": "左边柜子的抽屉",
+      "x": 90,
+      "y": 376,
+      "radius": 82
+    },
+    {
+      "itemId": "item_008",
+      "order": 8,
+      "slug": "bag",
+      "displayName": "手提包",
+      "tip": "右下角的手提包",
+      "x": 579,
+      "y": 411,
+      "radius": 68
+    }
+  ]
+}

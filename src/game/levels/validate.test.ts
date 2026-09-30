@@ -24,7 +24,8 @@ describe('validateLevel', () => {
   it('接受带下划线的 slug', () => {
     const level = sample()
     level.items[0]!.slug = 'cat_patch'
-    expect(validateLevel(level).items[0]?.slug).toBe('cat_patch')
+    level.items[1]!.slug = 'chairL'
+    expect(validateLevel(level).items.map((item) => item.slug)).toEqual(['cat_patch', 'chairL', 'patch', 'flower', 'bell'])
   })
 
   it('拒绝重复 slug', () => {

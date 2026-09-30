@@ -1,9 +1,75 @@
 {
   "schemaVersion": "spot-catalog-v1",
   "levels": [
-    { "resourceId": "001", "title": "山羊草地", "order": 1 },
-    { "resourceId": "002", "title": "厨房里的猫", "order": 2 },
-    { "resourceId": "003", "title": "运车的卡车", "order": 3 },
-    { "resourceId": "004", "title": "浴室洗手台", "order": 4 }
+    {
+      "resourceId": "001",
+      "title": "山羊草地",
+      "order": 1
+    },
+    {
+      "resourceId": "002",
+      "title": "厨房里的猫",
+      "order": 2
+    },
+    {
+      "resourceId": "003",
+      "title": "运车的卡车",
+      "order": 3
+    },
+    {
+      "resourceId": "004",
+      "title": "浴室洗手台",
+      "order": 4
+    },
+    {
+      "resourceId": "005",
+      "title": "厨房挂件",
+      "order": 5
+    },
+    {
+      "resourceId": "006",
+      "title": "教室",
+      "order": 6
+    },
+    {
+      "resourceId": "007",
+      "title": "海滩冲浪",
+      "order": 7
+    },
+    {
+      "resourceId": "008",
+      "title": "海滩野餐",
+      "order": 8
+    },
+    {
+      "resourceId": "009",
+      "title": "客厅",
+      "order": 9
+    },
+    {
+      "resourceId": "010",
+      "title": "厨房里的兄妹",
+      "order": 10
+    },
+    {
+      "resourceId": "011",
+      "title": "科学实验室",
+      "order": 11
+    },
+    {
+      "resourceId": "012",
+      "title": "梳妆间",
+      "order": 12
+    },
+    {
+      "resourceId": "013",
+      "title": "乡村厨房",
+      "order": 13
+    },
+    {
+      "resourceId": "014",
+      "title": "浴室",
+      "order": 14
+    }
   ]
 }

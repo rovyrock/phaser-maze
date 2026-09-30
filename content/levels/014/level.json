@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "014",
+    "configId": 14,
+    "title": "浴室",
+    "description": "找出两张图的不同（共 10 处）",
+    "type": "diff",
+    "targetCount": 10,
+    "totalTime": 120,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "light",
+      "displayName": "吊灯",
+      "tip": "天花板上的灯",
+      "x": 349,
+      "y": 12,
+      "radius": 46
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "curtain",
+      "displayName": "淋浴帘",
+      "tip": "中间的淋浴帘",
+      "x": 264,
+      "y": 190,
+      "radius": 72
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "tub",
+      "displayName": "浴缸",
+      "tip": "浴缸的外沿",
+      "x": 214,
+      "y": 268,
+      "radius": 52
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "flower",
+      "displayName": "窗台花",
+      "tip": "窗台上的花",
+      "x": 361,
+      "y": 186,
+      "radius": 24
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "chairL",
+      "displayName": "橙扶手椅",
+      "tip": "左边那把椅子",
+      "x": 76,
+      "y": 320,
+      "radius": 62
+    },
+    {
+      "itemId": "item_006",
+      "order": 6,
+      "slug": "mat",
+      "displayName": "地垫",
+      "tip": "地上的黄色小垫子",
+      "x": 356,
+      "y": 382,
+      "radius": 46
+    },
+    {
+      "itemId": "item_007",
+      "order": 7,
+      "slug": "chairR",
+      "displayName": "黄扶手椅",
+      "tip": "右边那把椅子",
+      "x": 426,
+      "y": 341,
+      "radius": 44
+    },
+    {
+      "itemId": "item_008",
+      "order": 8,
+      "slug": "cabinet",
+      "displayName": "洗手柜",
+      "tip": "洗手台下方的柜子",
+      "x": 502,
+      "y": 372,
+      "radius": 52
+    },
+    {
+      "itemId": "item_009",
+      "order": 9,
+      "slug": "rug",
+      "displayName": "地毯",
+      "tip": "地上的红地毯",
+      "x": 455,
+      "y": 436,
+      "radius": 56
+    },
+    {
+      "itemId": "item_010",
+      "order": 10,
+      "slug": "mirror",
+      "displayName": "镜子",
+      "tip": "墙上的镜子",
+      "x": 578,
+      "y": 132,
+      "radius": 52
+    }
+  ]
+}

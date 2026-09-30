@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "diff-level-phaser-v1",
+  "gameCode": "phaser-maze",
+  "level": {
+    "resourceId": "008",
+    "configId": 8,
+    "title": "海滩野餐",
+    "description": "找出两张图的不同（共 5 处）",
+    "type": "diff",
+    "targetCount": 5,
+    "totalTime": 90,
+    "picture": {
+      "width": 640,
+      "height": 460
+    }
+  },
+  "pictures": {
+    "top": {
+      "slot": "top",
+      "path": "assets/images/top.jpg",
+      "key": "top"
+    },
+    "bottom": {
+      "slot": "bottom",
+      "path": "assets/images/bottom.jpg",
+      "key": "bottom"
+    }
+  },
+  "items": [
+    {
+      "itemId": "item_001",
+      "order": 1,
+      "slug": "starfish",
+      "displayName": "海星",
+      "tip": "沙滩上的海星",
+      "x": 34,
+      "y": 343,
+      "radius": 30
+    },
+    {
+      "itemId": "item_002",
+      "order": 2,
+      "slug": "flipflops",
+      "displayName": "拖鞋",
+      "tip": "左下角的拖鞋",
+      "x": 81,
+      "y": 370,
+      "radius": 42
+    },
+    {
+      "itemId": "item_003",
+      "order": 3,
+      "slug": "ball",
+      "displayName": "沙滩球",
+      "tip": "沙滩球上的色块",
+      "x": 235,
+      "y": 339,
+      "radius": 36
+    },
+    {
+      "itemId": "item_004",
+      "order": 4,
+      "slug": "board",
+      "displayName": "冲浪板",
+      "tip": "冲浪板上的条纹",
+      "x": 529,
+      "y": 190,
+      "radius": 62
+    },
+    {
+      "itemId": "item_005",
+      "order": 5,
+      "slug": "castle_star",
+      "displayName": "沙堡海星",
+      "tip": "沙堡上的蓝色海星",
+      "x": 572,
+      "y": 313,
+      "radius": 24
+    }
+  ]
+}
